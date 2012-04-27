@@ -2,7 +2,8 @@
 class VmDriver
 
   def format_chef_ssh cmd
-    "ssh -o StrictHostKeyChecking=no #{CHEF_USER}@#{ip} #{cmd}"
+    ssh_key = File.join(File.dirname(__FILE__), "ssh", "id_rsa")
+    "ssh -o StrictHostKeyChecking=no -i #{ssh_key} #{CHEF_USER}@#{ip} #{cmd}"
   end
 
   def run cmd
