@@ -31,15 +31,6 @@ Dir["#{test_dir}/*vm_driver.rb"].each do |f|
   require f
 end
 
-def run_vm
-  
-  begin
-    yield vm
-  ensure
-    vm.destroy
-  end
-end
-
 vm_driver = "#{get_env "VM_DRIVER"}VmDriver"
 puts "Using VM_DRIVER #{vm_driver}"
 abort "VM_DRIVER not found #{vm_driver}" unless Object.const_defined? vm_driver
