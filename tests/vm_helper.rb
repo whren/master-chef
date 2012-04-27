@@ -28,6 +28,17 @@ class VmDriver
 
 end
 
+def upload_local_json name
+  ip = get_env("IP")
+  file = File.join(File.dirname(__FILE__), 'local_json',  "#{name}.json")
+  exec_local "scp #{file} chef@#{ip}:/tmp/"
+  exec_local "ssh chef@#{ip} sudo mv /tmp/#{name}.json /etc/chef/local.json"
+end
+
+def run_chef
+
+end
+
 test_dir = File.dirname(__FILE__)
 Dir["#{test_dir}/*vm_driver.rb"].each do |f|
   require f
