@@ -1,0 +1,12 @@
+---
+:fog:
+  :provider: AWS
+  :aws_access_key_id: AAAA
+  :aws_secret_access_key: bbbb
+  :region: eu-west-1
+:params:
+  :flavor_id: m1.large
+  :key_name: master-chef
+  :security_group_ids: ["open_world"]
+:amis:
+  :ubuntu_10: ami-xxxxxx

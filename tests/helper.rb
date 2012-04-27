@@ -5,6 +5,7 @@ require 'bundler/setup'
 require 'test/unit'
 
 require File.join(File.dirname(__FILE__), 'vm_helper.rb')
+require File.join(File.dirname(__FILE__), 'http_helper.rb')
 
 module VmTestHelper
 

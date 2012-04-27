@@ -1,6 +1,4 @@
 
-require File.join(File.dirname(__FILE__), 'http_helper.rb')
-
 class VmDriver
 
   def format_chef_ssh cmd
