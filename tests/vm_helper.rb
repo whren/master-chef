@@ -1,4 +1,6 @@
 
+CHEF_USER = ENV["CHEF_USER"] || "chef"
+
 def exec_local cmd
   begin
     raise "#{cmd} failed. Aborting..." unless system cmd
@@ -12,24 +14,10 @@ def get_env name
   ENV[name]
 end
 
-class VmDriver
-
-  def format_root_ssh cmd
-    "ssh -o StrictHostKeyChecking=no root@#{ip} #{cmd}"
-  end
-
-  def run_root cmd
-    begin
-      raise "ssh root : #{cmd} failed. Aborting..." unless system format_root_ssh(cmd) 
-    rescue
-      raise "ssh root : #{cmd} failed. Aborting..."
-    end
-  end
-
-end
+require File.join(File.dirname(__FILE__), 'vm_driver.rb')
 
 test_dir = File.dirname(__FILE__)
-Dir["#{test_dir}/*vm_driver.rb"].each do |f|
+Dir["#{test_dir}/*_vm_driver.rb"].each do |f|
   require f
 end
 
