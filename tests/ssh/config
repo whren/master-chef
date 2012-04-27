@@ -1,0 +1,4 @@
+StrictHostKeyChecking no
+CheckHostIP no
+VerifyHostKeyDNS no
+UserKnownHostsFile /tmp/tmp_known_hosts

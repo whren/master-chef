@@ -2,9 +2,10 @@
 class VmDriver
 
   def format_chef_ssh cmd
+    config = File.join(File.dirname(__FILE__), "ssh", "config") 
     ssh_key = File.join(File.dirname(__FILE__), "ssh", "id_rsa")
-    %x{chmod 0600 #{ssh_key}}
-    "ssh -o CheckHostIP=no -o StrictHostKeyChecking=no -i #{ssh_key} #{CHEF_USER}@#{ip} #{cmd}"
+    %x{chmod 0600 #{ssh_key} && rm -f /tmp/tmp_known_hosts}
+    "ssh -F #{config} -i #{ssh_key} #{CHEF_USER}@#{ip} #{cmd}"
   end
 
   def run cmd
