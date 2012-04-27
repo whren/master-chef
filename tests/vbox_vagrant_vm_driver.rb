@@ -11,6 +11,9 @@ class VboxVagrantVmDriver < VmDriver
       io.puts "config.vm.network :hostonly, \"#{ip}\""
       io.puts "end"
     end
+  end
+
+  def init
     Dir.chdir(directory)
     exec_local "vagrant up"
   end

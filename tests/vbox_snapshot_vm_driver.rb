@@ -4,6 +4,9 @@ class VboxSnapshotVmDriver < VmDriver
     @name = get_env("NAME")
     @ip = get_env("IP")
     @snapshot = get_env("SNAPSHOT")
+  end
+
+  def init
     vbox_manage "snapshot \"#{@name}\" restore \"#{@snapshot}\""
     vbox_manage "startvm \"#{@name}\" --type headless"
     sleep 2

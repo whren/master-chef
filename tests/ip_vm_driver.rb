@@ -5,6 +5,9 @@ class IpVmDriver < VmDriver
     @ip = get_env("IP")
   end
 
+  def init
+  end
+
   def ip
     @ip
   end
