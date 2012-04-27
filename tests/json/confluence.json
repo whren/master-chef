@@ -1,0 +1,12 @@
+{
+  "repos": {
+    "git": [
+      "git://github.com/octo-technology/master-chef.git"
+    ]
+  },
+  "run_list": [
+    "recipe[confluence]"
+  ],
+  "node_config": {
+  }
+}
