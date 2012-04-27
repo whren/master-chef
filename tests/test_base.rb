@@ -1,6 +1,6 @@
-require File.join(File.dirname(__FILE__), 'test_helper.rb')
+require File.join(File.dirname(__FILE__), 'helper.rb')
 
-class BaseTest < Test::Unit::TestCase
+class TestBase < Test::Unit::TestCase
 
   include VmTestHelper
 

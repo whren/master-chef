@@ -17,4 +17,10 @@ class VmDriver
     run "/etc/chef/update.sh"
   end
 
+  def upload_json json
+    json_file = File.join(File.dirname(__FILE__), "json", json)
+    exec_local "scp #{json_file} #{CHEF_USER}@#{ip}:/tmp/local.json"
+    self.run "sudo mv /tmp/local.json /etc/chef/local.json"
+  end
+
 end
