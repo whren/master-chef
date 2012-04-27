@@ -22,4 +22,8 @@ class HttpTester
     assert_match regex, @response.body
   end
 
+  def response
+    @response
+  end
+
 end
