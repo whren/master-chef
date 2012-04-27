@@ -7,6 +7,9 @@ class TestRedmine < Test::Unit::TestCase
   def test_redmine
     @vm.upload_json "redmine.json"
     @vm.run_chef
+    @http.get 80, "/redmine"
+    @http.assert_last_response_code 200
+    @http.assert_last_response_body_regex /Redmine/
   end
 
 end

@@ -16,6 +16,7 @@ module VmTestHelper
     %x{#{@vm.format_chef_ssh "uname -a"}}
     assert_equal 0, $?.exitstatus
     puts "Virtual machine ready !"
+    @http = ::HttpTester.new @vm
   end
 
   def teardown
