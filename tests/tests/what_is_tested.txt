@@ -1,0 +1,37 @@
+conf 1
+
+* chef-solo scripts
+* confluence
+* tomcat
+* tomcat instance
+* tomcat http connector auto config
+* tomcat war rename for changing /toto
+* mysql database auto config
+* nginx
+
+conf 2
+
+* jenkins
+* tomcat
+* tomcat instance
+* tomcat http connector manual config
+* nginx
+* TO BE DONE nginx http basic auth
+
+conf 3
+
+* redmine
+* ruby / unicorn deployment
+* mysql
+* mysql database auto config
+* nginx
+
+conf 4
+
+* TO BE DONE sonar
+* TO BE DONE tomcat
+* TO BE DONE tomcat instance auto config
+* TO BE DONE mysql database manual config
+* TO BE DONE nexus
+* TO BE DONE tomcat instance auto config
+* TO BE DONE nginx

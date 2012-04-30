@@ -1,11 +1,11 @@
-require File.join(File.dirname(__FILE__), 'helper.rb')
+require File.join(File.dirname(__FILE__), '..', 'helper.rb')
 
 class TestRedmine < Test::Unit::TestCase
 
   include VmTestHelper
 
-  def test_redmine
-    @vm.upload_json "redmine.json"
+  def test_conf3
+    @vm.upload_json "conf3.json"
     @vm.run_chef
     @http.get 80, "/redmine"
     @http.assert_last_response_code 200

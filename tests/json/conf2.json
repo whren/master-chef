@@ -1,0 +1,23 @@
+{
+  "repos": {
+    "git": [
+      "git://github.com/octo-technology/master-chef.git"
+    ]
+  },
+  "run_list": [
+    "recipe[master_chef::chef_solo_scripts]",
+    "recipe[jenkins]"
+  ],
+  "node_config": {
+    "jenkins": {
+      "tomcat": {
+        "connectors": {
+          "http": {
+            "port": 9999,
+            "address": "127.0.0.1"
+          }
+        }
+      }
+    }
+  }
+}

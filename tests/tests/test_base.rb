@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'helper.rb')
+require File.join(File.dirname(__FILE__), '..', 'helper.rb')
 
 class TestBase < Test::Unit::TestCase
 
