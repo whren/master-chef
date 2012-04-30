@@ -4,7 +4,7 @@ conf 1
 * confluence
 * tomcat
 * tomcat instance
-* tomcat http connector auto config
+* tomcat http connector manual config
 * tomcat war rename for changing /toto
 * mysql database auto config
 * nginx
@@ -14,7 +14,7 @@ conf 2
 * jenkins
 * tomcat
 * tomcat instance
-* tomcat http connector manual config
+* tomcat http connector auto config with specific connector params
 * nginx
 * TO BE DONE nginx http basic auth
 

@@ -11,7 +11,8 @@ class HttpTester
   end
 
   def get port, path
-    @response = Net::HTTP.get_response(URI("http://#{@vm.ip}:#{port}#{path}"))
+    uri = URI.parse "http://#{@vm.ip}:#{port}#{path}"
+    @response = Net::HTTP.get_response(uri)
   end
 
   def assert_last_response_code code
@@ -20,6 +21,10 @@ class HttpTester
 
   def assert_last_response_body_regex regex
     assert_match regex, @response.body
+  end
+
+  def assert_last_response_body_not_regex regex
+    assert_not_match regex, @response.body
   end
 
   def response

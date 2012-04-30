@@ -10,7 +10,15 @@
   ],
   "node_config": {
     "confluence": {
-      "location": "/toto"
+      "location": "/toto",
+      "tomcat": {
+        "connectors": {
+          "http": {
+            "port": 9999,
+            "address": "127.0.0.1"
+          }
+        }
+      }
     }
   }
 }

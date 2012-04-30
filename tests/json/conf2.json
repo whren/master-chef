@@ -9,15 +9,5 @@
     "recipe[jenkins]"
   ],
   "node_config": {
-    "jenkins": {
-      "tomcat": {
-        "connectors": {
-          "http": {
-            "port": 9999,
-            "address": "127.0.0.1"
-          }
-        }
-      }
-    }
   }
 }
