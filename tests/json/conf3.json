@@ -5,6 +5,8 @@
     ]
   },
   "run_list": [
+    "recipe[base::system]",
+    "recipe[master_chef::chef_solo_scripts]",
     "recipe[redmine]"
   ],
   "node_config": {
