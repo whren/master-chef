@@ -1,33 +1,40 @@
 conf 1
 
+* base system
 * chef-solo scripts
 * confluence
 * tomcat
 * tomcat instance
 * tomcat http connector manual config
 * tomcat war rename for changing /toto
+* mysql
 * mysql database auto config
-* nginx
+* nginx location on vhost
 
 conf 2
 
+* base system
+* chef-solo scripts
 * jenkins
 * tomcat
-* tomcat instance
 * tomcat http connector auto config with specific connector params
-* nginx
+* nginx location on vhost
 * TO BE DONE nginx http basic auth
 
 conf 3
 
+* base system
+* chef-solo scripts
 * redmine
 * ruby / unicorn deployment
 * mysql
 * mysql database auto config
-* nginx
+* nginx location on vhost
 
 conf 4
 
+* base system
+* chef-solo scripts
 * TO BE DONE sonar
 * TO BE DONE tomcat
 * TO BE DONE tomcat instance auto config
